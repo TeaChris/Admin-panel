@@ -37,6 +37,16 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* =================== DARK THEME VARIBLES ======================== */
+.dark-theme-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3dbcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light)
+}
+
 html{
     font-size: 14px;
 }
@@ -56,8 +66,8 @@ body{
     display: grid;
     width: 98%;
     margin: 0 auto;
-    gap: 1.8rem;
-    grid-template-columns: 12rem auto 23rem;
+    gap: 1.2rem;
+    grid-template-columns: 12rem 60rem 20rem;
 }
 
 /* =========== general styles============== */
@@ -519,6 +529,11 @@ main a{
     justify-content: center;
 }
 
+.right .sales_analytics .add_product:hover{
+    background: var(--color-primary);
+    color: #fff;
+}
+
 .right .sales_analytics .add_product div{
     display: flex;
     align-items: center;
@@ -604,7 +619,7 @@ main a{
 
     aside{
         position: fixed;
-        left: 0;
+        left: -100;
         background: var(--color-white);
         width: 18rem;
         z-index: 3;
@@ -612,6 +627,13 @@ main a{
         height: 100vh;
         padding-right: var(--card-pading);
         display: none;
+        animation: showMenu 400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
     }
 
     aside .logo{
@@ -659,7 +681,7 @@ main a{
     main a{
         text-align: center;
     }
-    
+
     .right{
         width: 94%;
         margin: 0 auto 4rem;
